@@ -47,7 +47,7 @@ for radio-interferometric data analysis:
 - `astropy`
 - `pyuvdata`
 - `hera_pspec`
--` `python-casacore (required only when reading Measurement Sets)
+- `python-casacore` (required only when reading Measurement Sets)
 
 
 ## Additional resources
