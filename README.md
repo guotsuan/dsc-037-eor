@@ -11,6 +11,7 @@ spectra that highlight cable-reflection systematics in SKA-Low pathfinder data.
 | Notebook | Focus | Key capabilities |
 | --- | --- | --- |
 | `plot_vis_for_mwa_lofar.ipynb` | Challenge step 3: visibility inspection | Loads visibilities from LOFAR Measurement Sets (via `casacore`) or UVFITS/pyuvdata-compatible files and plots amplitude and phase versus time and frequency for individual baselines. Interactive controls let you choose polarisations, antennas, and plotting axes to verify temporal and spectral smoothness. |
+| `plot-calibration-solutions.ipynb` | Challenge step 3: calibration-solution QA | Opens complex gain solutions saved as FITS tables and plots the per-antenna, per-polarisation amplitude and phase versus frequency. Provides optional phase unwrapping and smoothness metrics to highlight jumps that may indicate cable reflections or calibration pathologies. |
 | `bl-avg_delayps_per_antenna.ipynb` | Challenge step 4: delay power spectra per antenna | Builds time- and redundancy-averaged delay power spectra for all baselines that include a selected antenna. Uses `pyuvdata` to read visibilities and `hera_pspec` to form delay transforms, with options to filter by polarisation, time range, and maximum baseline length. |
 | `time-avg_delayps_across_blens.ipynb` | Challenge step 4: delay spectra across baseline lengths | Aggregates time-averaged delay power spectra across all baselines shorter than a configurable threshold, enabling cylindrical averaging by baseline-length bin. Mirrors the configuration controls of the per-antenna notebook but emphasises exploring different redundant groups. |
 
@@ -22,20 +23,13 @@ inline.
 
 ## Dataset prerequisites
 
-All workflows assume access to the Murchison Widefield Array (MWA) dataset made
-available through Rucio for the challenge (see
-https://confluence.skatelescope.org/x/tnTGEg).  The dataset characteristics are:
+We will use either a LOFAR or MWA dataset to implement this worflow:MWA dataset(~2 GB, uvhts):
+```wget https: //projects.pawsey.org.au/high0.uvfits/hyp_1184702048_ionosub_ssins_30l_src8k_300it_8s_80kHz_i1000.uvfits```
 
-- Integration time: 8 s
-- Total duration: 112 s
-- Bandwidth: 28 MHz centred on 65 MHz
-- 384 frequency channels of width 44 kHz
-- Direction-independent calibration and sky-model subtraction applied
-- Calibration solutions distributed alongside the visibilities
-- Approximate download size: 1.9 GB
+LOFAR dataset (~22 GB, Measurement Set):
+```wget -0 L253456_SAP000_002_time1.flagged.5ch8s.dical.Ms.zip"https://share.obspm.fr/s/Cek959sM3KRb4BQ/download'```
 
-LOFAR data
-TODO
+Implementation we wil have to be done on your local resource until a SRCNet resource where to run it can be secured
 
 ## Software requirements
 
