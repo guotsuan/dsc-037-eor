@@ -23,14 +23,22 @@ load the visibilities, prepare them for analysis, and render the diagnostic plot
 inline.
 
 ## Dataset prerequisites
+Each notebook assumes access to calibrated visibility data from either an MWA or
+LOFAR observation. The example datasets below are the ones used during the
+challenge and provide a good starting point when reproducing the analysis.
 
-We will use either a LOFAR or MWA dataset to implement this worflow:MWA dataset(~2 GB, uvhts):
-```wget https: //projects.pawsey.org.au/high0.uvfits/hyp_1184702048_ionosub_ssins_30l_src8k_300it_8s_80kHz_i1000.uvfits```
+### MWA example dataset (~2 GB, UVFITS)
 
-LOFAR dataset (~22 GB, Measurement Set):
-```wget -0 L253456_SAP000_002_time1.flagged.5ch8s.dical.Ms.zip"https://share.obspm.fr/s/Cek959sM3KRb4BQ/download'```
+```bash
+wget https://projects.pawsey.org.au/high0.uvfits/hyp_1184702048_ionosub_ssins_30l_src8k_300it_8s_80kHz_i1000.uvfits
+```
 
-Implementation we wil have to be done on your local resource until a SRCNet resource where to run it can be secured
+### LOFAR example dataset (~22 GB, Measurement Set)
+
+```bash
+wget -O L253456_SAP000_002_time1.flagged.5ch8s.dical.MS.zip 'https://share.obspm.fr/s/Cek959sM3KRb4BQ/download'
+unzip L253456_SAP000_002_time1.flagged.5ch8s.dical.MS.zip
+```
 
 ## Software requirements
 
